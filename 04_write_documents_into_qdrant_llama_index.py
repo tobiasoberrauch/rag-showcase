@@ -1,9 +1,8 @@
 from llama_index.core import (
     Settings,
     SimpleDirectoryReader,
-    VectorStoreIndex,
-    download_loader,
     StorageContext,
+    VectorStoreIndex,
 )
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.vector_stores.qdrant import QdrantVectorStore
@@ -21,5 +20,4 @@ vector_store = QdrantVectorStore(client=client, collection_name="data_llama_inde
 
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
-# Create a GPTVectorStoreIndex
 index = VectorStoreIndex.from_documents(documents, storage_context=storage_context)

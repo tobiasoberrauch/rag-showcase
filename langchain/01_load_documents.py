@@ -2,7 +2,7 @@ from langchain.document_loaders.directory import DirectoryLoader
 from rich import print
 from langchain.text_splitter import CharacterTextSplitter
 
-loader = DirectoryLoader("./data")
+loader = DirectoryLoader("../data")
 documents = loader.load()
 print(len(documents))
 

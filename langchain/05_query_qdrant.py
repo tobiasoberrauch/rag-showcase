@@ -31,9 +31,5 @@ vector_store = Qdrant(
 # similarity_search
 similar_documents = vector_store.search("Was ist LEAM?", "similarity")
 
-# max_marginal_relevance_search
-max_marginal_documents = vector_store.search("Was ist LEAM?", "mmr")
-
 console = Console()
 console.print(create_table("similar_documents", similar_documents))
-console.print(create_table("max_marginal_documents", max_marginal_documents))

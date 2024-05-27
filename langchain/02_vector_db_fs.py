@@ -5,7 +5,7 @@ from qdrant_client.models import Distance, PointStruct, VectorParams
 VECTORE_SIZE = 128
 COLLECTION_NAME = "test_collection"
 
-client = QdrantClient(path="./storage")
+client = QdrantClient(path="../storage")
 
 if not client.collection_exists(COLLECTION_NAME):
     client.create_collection(

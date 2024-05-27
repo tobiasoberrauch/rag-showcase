@@ -21,7 +21,7 @@ def benchmark(chunk_size, chunk_overlap, splitter_cls):
     splitter = splitter_cls(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
 
     # Load and split the documents
-    loader = DirectoryLoader("./data", glob="**/*.pdf", loader_cls=PyPDFLoader)
+    loader = DirectoryLoader("../data", glob="**/*.pdf", loader_cls=PyPDFLoader)
     documents = loader.load_and_split(text_splitter=splitter)
 
     load_and_split_time = time.time() - start_time

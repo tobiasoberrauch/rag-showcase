@@ -9,7 +9,7 @@ Im Zentrum von LEAM steht der Aufbau vertrauenswürdiger Open-Source Foundation-
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=500,
-    chunk_overlap=50,
+    chunk_overlap=0,
     length_function=len
 )
 
